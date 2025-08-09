@@ -1,5 +1,4 @@
 Instalar Dependencias:
-
 npm init -y
 
 install express
@@ -16,5 +15,10 @@ npm install sequelize tedious
 npm install method-override
 npm install ejs
 
+npm install express-session
+
 Probar API:
+Correr este código para poder probar la API:
+node crearAdmin.js
+
 npm run dev
