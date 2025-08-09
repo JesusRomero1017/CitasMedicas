@@ -70,6 +70,15 @@ CREATE TABLE Consulta (
 );
 GO
 
+-- Tabla Usuario
+CREATE TABLE Usuario (
+    id_usuario INT IDENTITY(1,1) PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    rol VARCHAR(20) NOT NULL CHECK (rol IN ('Admin', 'Medico', 'Recepcionista'))
+);
+GO
+
 -- Insertar Pacientes
 INSERT INTO Paciente (nombre, apellido, fechaNacimiento, telefono, correo)
 VALUES
