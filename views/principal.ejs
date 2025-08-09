@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido | Sistema de Citas Médicas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('https://okdiario.com/img/2025/02/23/ni-alemania-ni-inglaterra-este-es-el-inesperado-destino-que-eligen-los-medicos-espanoles-para-trabajar1-635x358.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.85);
+            z-index: 1;
+        }
+        .main-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 80px auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+            padding: 48px 36px;
+            text-align: center;
+        }
+        .logo {
+            width: 90px;
+            margin-bottom: 18px;
+        }
+        .decor-img {
+            width: 60px;
+            margin: 0 10px 20px 10px;
+            vertical-align: middle;
+        }
+        h1 {
+            color: #1976d2;
+            margin-bottom: 16px;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        ul {
+            text-align: left;
+            margin: 0 auto 24px auto;
+            max-width: 500px;
+            color: #34495e;
+            font-size: 1.08em;
+        }
+        p {
+            color: #34495e;
+            font-size: 1.18em;
+            margin-bottom: 32px;
+        }
+        .main-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 14px 38px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .main-btn:hover {
+            background: #1565c0;
+        }
+        @media (max-width: 700px) {
+            .main-content {
+                padding: 24px 8px;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="main-content">
+        <img src="https://img.icons8.com/ios-filled/100/1976d2/doctor-male.png" alt="Logo Médico" class="logo"/>
+        <h1>¡Bienvenido al Sistema de Citas Médicas!</h1>
+        <p>
+            Gestiona tus citas médicas de manera fácil, rápida y segura.<br>
+            Nuestro sistema te permite programar, consultar y dar seguimiento a tus consultas con los mejores especialistas.
+        </p>
+        <img src="https://img.icons8.com/fluency/96/medical-doctor.png" class="decor-img" alt="Doctor"/>
+        <img src="https://img.icons8.com/fluency/96/stethoscope.png" class="decor-img" alt="Estetoscopio"/>
+
+        <h2>Beneficios de usar nuestra API de Citas Médicas</h2>
+        <ul>
+            <li>Acceso 24/7 para agendar y consultar citas desde cualquier dispositivo.</li>
+            <li>Reducción de tiempos de espera y mayor organización en la atención médica.</li>
+            <li>Notificaciones automáticas para recordar tus citas y evitar olvidos.</li>
+            <li>Historial de citas siempre disponible para un mejor seguimiento de tu salud.</li>
+            <li>Interfaz intuitiva y segura, pensada para todo tipo de usuarios.</li>
+        </ul>
+
+        <h2>Impacto Social</h2>
+        <ul>
+            <li>Facilita el acceso a servicios médicos, especialmente en comunidades alejadas.</li>
+            <li>Contribuye a la digitalización del sector salud, mejorando la eficiencia y la calidad del servicio.</li>
+            <li>Reduce la saturación en centros médicos al optimizar la gestión de turnos.</li>
+            <li>Promueve la prevención y el seguimiento oportuno de enfermedades.</li>
+        </ul>
+
+        <a href="citas/agendarCita" class="main-btn">Agendar Cita</a>
+        <a href="/consultarCitas" class="main-btn">Consultar Citas</a>
+        <a href="/logout" class="main-btn">Cerrar Sesión</a>
+    </div>
+</body>
+</html>

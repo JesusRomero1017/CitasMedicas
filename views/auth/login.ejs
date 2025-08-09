@@ -63,12 +63,22 @@
         .back-link:hover {
             text-decoration: underline;
         }
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="login-container">
         <img src="https://img.icons8.com/ios-filled/100/1976d2/doctor-male.png" alt="Medical Logo" class="logo"/>
         <h2>Iniciar Sesión</h2>
+
+        <% if (error) { %>
+          <p class="error-message"><%= error %></p>
+        <% } %>
+
         <form action="/login" method="POST">
             <input type="text" name="usuario" placeholder="Usuario" required>
             <input type="password" name="password" placeholder="Contraseña" required>
