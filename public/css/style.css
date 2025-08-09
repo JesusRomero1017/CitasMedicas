@@ -1,0 +1,105 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.error {
+  background-color: #ffe0e0;
+  color: #a00;
+  padding: 10px;
+  border: 1px solid #f5c2c2;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+a.btn,
+button.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px 2px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-view {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.form-inline {
+  display: inline;
+}
+
+table.citas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.citas-table th,
+table.citas-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+table.citas-table th {
+  background-color: #f0f0f0;
+}
+
+table.citas-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.back-link {
+  text-align: center;
+  display: block;
+  margin-top: 18px;
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.98em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

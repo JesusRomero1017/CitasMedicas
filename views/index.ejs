@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Citas Medicas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0f6fc, #cfdef3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 450px;
+            margin: 80px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            padding: 40px 32px;
+            text-align: center;
+        }
+        .logo {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2d3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #4a6572;
+            margin-bottom: 30px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        .main-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            width: 80%;
+            max-width: 250px;
+        }
+        .main-btn:hover {
+            background: #1565c0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 8px;
+            }
+            .main-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://img.icons8.com/ios-filled/100/1976d2/doctor-male.png" alt="Medical Logo" class="logo"/>
+        <h1>Bienvenido a citas medicas!!</h1>
+        <p>
+            Programe, gestione y haga seguimiento de sus citas médicas fácilmente. <br>
+            Su salud, organizada y accesible.
+            
+        </p>
+        <div class="btn-group">
+            <a href="auth/login" class="main-btn">Iniciar sesión</a>
+            <a href="auth/crearCuenta" class="main-btn">Crear cuenta</a>
+            <a href="citas/agendarCita" class="main-btn">Agendar cita</a>
+            <a href="citas/consultarCitas" class="main-btn">Consultar citas</a>
+        </div>
+    </div>
+</body>
+</html>

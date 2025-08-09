@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión | Citas Médicas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0eafc, #cfdef3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .login-container {
+            max-width: 370px;
+            margin: 90px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            padding: 38px 28px;
+            text-align: center;
+        }
+        .logo {
+            width: 70px;
+            margin-bottom: 18px;
+        }
+        h2 {
+            color: #2d3e50;
+            margin-bottom: 18px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 12px;
+            border-radius: 7px;
+            border: 1px solid #b0bec5;
+            font-size: 1em;
+        }
+        .login-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 7px;
+            font-size: 1.05em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .login-btn:hover {
+            background: #1565c0;
+        }
+        .back-link {
+            display: block;
+            margin-top: 18px;
+            color: #1976d2;
+            text-decoration: none;
+            font-size: 0.98em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://img.icons8.com/ios-filled/100/1976d2/doctor-male.png" alt="Medical Logo" class="logo"/>
+        <h2>Iniciar Sesión</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit" class="login-btn">Entrar</button>
+        </form>
+        <a href="/index" class="back-link">← Volver al inicio</a>
+    </div>
+</body>
+</html>

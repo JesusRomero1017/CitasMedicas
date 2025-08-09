@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Listado de Citas</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Listado de Citas</h1>
+
+    <% if (typeof error !== 'undefined' && error) { %>
+      <div class="error"><%= error %></div>
+    <% } %>
+
+    <a href="/citas/nuevo" class="btn btn-primary">+ Nueva Cita</a>
+
+    <table class="citas-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Paciente</th>
+          <th>Médico</th>
+          <th>Fecha</th>
+          <th>Motivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% citas.forEach(cita => { %>
+          <tr>
+            <td><%= cita.id_cita %></td>
+            <td><%= cita.id_paciente %></td>
+            <td><%= cita.id_medico %></td>
+            <td><%= new Date(cita.fecha).toLocaleString() %></td>
+            <td><%= cita.motivo %></td>
+            <td>
+              <a href="/citas/<%= cita.id %>" class="btn btn-view">Ver</a>
+              <a href="/citas/<%= cita.id %>/editar" class="btn btn-edit">Editar</a>
+              <form action="/citas/<%= cita.id %>?_method=DELETE" method="POST" class="form-inline">
+                <button type="submit" class="btn btn-delete" onclick="return confirm('¿Eliminar esta cita?')">Eliminar</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <a href="/index" class="back-link">← Volver al inicio</a>
+  </div>
+</body>
+</html>

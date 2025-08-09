@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendar Cita | Citas Médicas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0eafc, #cfdef3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .form-container {
+            max-width: 420px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            padding: 38px 28px;
+            text-align: center;
+        }
+        .logo {
+            width: 70px;
+            margin-bottom: 18px;
+        }
+        h2 {
+            color: #2d3e50;
+            margin-bottom: 18px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        input, select, textarea {
+            padding: 12px;
+            border-radius: 7px;
+            border: 1px solid #b0bec5;
+            font-size: 1em;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        .submit-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 7px;
+            font-size: 1.05em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: #1565c0;
+        }
+        .back-link {
+            display: block;
+            margin-top: 18px;
+            color: #1976d2;
+            text-decoration: none;
+            font-size: 0.98em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="https://img.icons8.com/ios-filled/100/1976d2/doctor-male.png" alt="Medical Logo" class="logo"/>
+        <h2>Agendar Nueva Cita</h2>
+        <form action="/citas" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="date" name="fecha" required>
+            <input type="time" name="hora" required>
+            <select name="especialidad" required>
+                <option value="">Selecciona especialidad</option>
+                <option value="Cardiología">Cardiología</option>
+                <option value="Dermatología">Dermatología</option>
+                <option value="Pediatría">Pediatría</option>
+                <option value="Neurología">Neurología</option>
+                <option value="Oftalmología">Oftalmología</option>
+                <!-- Puedes agregar más especialidades aquí -->
+            </select>
+            <textarea name="motivo" placeholder="Motivo de la cita" required></textarea>
+            <button type="submit" class="submit-btn">Agendar Cita</button>
+        </form>
+        <a href="/index" class="back-link">← Volver al inicio</a>
+    </div>
+</body>
+</html>
