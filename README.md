@@ -18,7 +18,7 @@ npm install ejs
 npm install express-session
 
 Probar API:
-Correr este código para poder probar la API:
+Correr este código en la consola del proyecto para poder probar la API:
 node crearAdmin.js
 
 npm run dev
